@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parnika | Futuristic Portfolio</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #000428, #004e92);
+        color: white;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    header h1 {
+        font-size: 2rem;
+        color: #00fff7;
+        text-shadow: 0 0 4px #00fff7;
+    }
+    nav a {
+        margin: 0 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        position: relative;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #00fff7;
+    }
+    .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        background: url('https://images.unsplash.com/photo-1537432376769-00a5d1d0fcca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center/cover;
+        position: relative;
+    }
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .hero img, .hero h2, .hero p {
+        position: relative;
+        z-index: 1;
+    }
+    .hero img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #00fff7;
+        margin-bottom: 20px;
+        box-shadow: 0 0 8px #00fff7;
+    }
+    .hero h2 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+        color: #00fff7;
+        text-shadow: 0 0 6px #00fff7;
+    }
+    .hero p {
+        font-size: 1.3rem;
+        max-width: 600px;
+    }
+    section {
+        padding: 80px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    h3 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        color: #00fff7;
+        text-shadow: 0 0 4px #00fff7;
+    }
+    .skills, .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+    .card {
+        background: rgba(255,255,255,0.05);
+        padding: 25px;
+        border-radius: 12px;
+        backdrop-filter: blur(8px);
+        transition: transform 0.4s, background0.4s;
+        box-shadow: 0 0 8px rgba(0,255,255,0.3);
+    }
+    .card:hover {
+        transform: scale(1.05);
+        background: rgba(255,255,255,0.1);
+    }
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: rgba(255,255,255,0.05);
+        font-size: 1rem;
+        backdrop-filter: blur(8px);
+    }
+    .chatbot {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #00fff7;
+        color: black;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 0 12px #00fff7;
+        font-weight: bold;
+        transition: background0.3s;
+    }
+    .chatbot:hover {
+        background: #00d1c5;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Parnika Devare </h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <img src="profile photo.jpg" alt="Parnika Photo">
+    <h2>Hi, I'm Parnika — Futuristic Web Developer 🚀</h2>
+    <p>I design cutting-edge, visually stunning websites blending technology, creativity, and AI to build next-gen digital experiences.</p>
+</section>
+
+<section id="about">
+    <h3>About Me</h3>
+    <p>I am Parnika Devare, a Web Developer and Computer Engineering student at Usha Mittal Institute of Technology, Mumbai. I specialize in futuristic, responsive, interactive websites powered by strong technical foundations and design excellence.</p>
+    <p>From AI-driven web experiences to gamified apps and interactive projects like premium stopwatches, healthcare websites, and Java-based games, I build solutions that stand out, engage users, and deliver real-world impact.</p>
+    <p>Driven by creativity and a growth mindset, I strive to create memorable, innovative applications that leave a lasting impression, with aspirations to contribute to top companies like Google.</p>
+</section>
+
+<section id="skills">
+    <h3>My Skills</h3>
+    <div class="skills">
+        <div class="card">HTML5, CSS3, Responsive Design</div>
+        <div class="card">JavaScript (ES6+), DOM Interactions</div>
+        <div class="card">UI/UX Principles, Visual Design</div>
+        <div class="card">Version Control (Git & GitHub)</div>
+        <div class="card">Java (OOPs, Game & App Development)</div>
+        <div class="card">Problem Solving & Logical Thinking</div>
+        <div class="card">Creative Coding & AI Integration</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h3>My Projects</h3>
+    <div class="projects">
+        <div class="card">Interactive Landing Page</div>
+        <div class="card">Stopwatch Web Application</div>
+        <div class="card">Premium Tic-Tac-Toe Game</div>
+        <div class="card">Healthcare Website (Modern, Responsive Design)</div>
+        <div class="card">Java Mini Project: Balloon Shooting Game</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h3>Contact Me</h3>
+    <p>Want to work together or discuss exciting projects? Feel free to reach out!</p>
+    <p>Email: parnikadevare444@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/parnika-devare-2631012bb" target="_blank">LinkedIn Profile</a></p>
+    <p>GitHub: <a href="https://github.com/ParnikaDevare" target="_blank">github.com/ParnikaDevare</a></p>
+</section>
+
+<footer>
+    &copy; 2025 Parnika | All Rights Reserved
+</footer>
+
+<button class="chatbot" id="chatButton">🤖 AI Chat</button>
+
+<script>
+const chatButton = document.getElementById("chatButton");
+chatButton.addEventListener("click", () => {
+    const msg = prompt("Hi! Ask me about Parnika's skills, projects, or experience:");
+    if (msg) {
+        if (msg.toLowerCase().includes("skills")) {
+            alert("Parnika is skilled in Web Development, JavaScript, Java, UI/UX, AI, and more.");
+        } else if (msg.toLowerCase().includes("projects")) {
+            alert("You can explore Parnika's projects like Landing Pages, Stopwatches, Games, Healthcare Websites, and more.");
+        } else if (msg.toLowerCase().includes("experience")) {
+            alert("Parnika is pursuing Computer Engineering from Usha Mittal Institute and building real-world web apps.");
+        } else {
+            alert("I'm still learning! Feel free to check the sections above for more info.");
+        }
+    }
+});
+</script>
+</body>
+</html>
